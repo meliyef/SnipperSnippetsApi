@@ -13,8 +13,10 @@ app.get('/', (req, res) => {
 });
 
 // Import your routes (we'll create these later)
-const snippetsRouter = require('./routes/snippetRouter'); 
+const snippetsRouter = require('./routes/snippetRouter');
+const usersRouter = require('./routes/userRouter'); 
 app.use('/api/snippets', snippetsRouter);
+app.use('/api/users',usersRouter);
 
 // Catch-all for handling 404 errors (if route not found)
 app.use((req, res) => {
